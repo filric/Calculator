@@ -24,5 +24,35 @@ namespace CalculatorApp
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Addition_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Subtraktion_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Multiplikation_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Divition_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
