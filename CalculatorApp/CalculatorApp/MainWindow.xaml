@@ -22,6 +22,19 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock Name="MyTextBlock"  Grid.ColumnSpan="3" Margin="10"/>
+        <Button Click="Button1_Click" Name="Button1" Grid.Row="1" Grid.Column="0" Content="1" FontSize="50" />
+        <Button Click="Button2_Click" Name="Button2" Grid.Row="1" Grid.Column="1" Content="2" FontSize="50" />
+        <Button Click="Button3_Click" Name="Button3" Grid.Row="1" Grid.Column="2" Content="3" FontSize="50" />
+        <Button Click="Button4_Click" Name="Button4" Grid.Row="2" Grid.Column="0" Content="4" FontSize="50" />
+        <Button Click="Button5_Click" Name="Button5" Grid.Row="2" Grid.Column="1" Content="5" FontSize="50" />
+        <Button Click="Button6_Click" Name="Button6" Grid.Row="2" Grid.Column="2" Content="6" FontSize="50" />
+        <Button Click="Button7_Click" Name="Button7" Grid.Row="3" Grid.Column="0" Content="7" FontSize="50" />
+        <Button Click="Button8_Click" Name="Button8" Grid.Row="3" Grid.Column="1" Content="8" FontSize="50" />
+        <Button Click="Button9_Click" Name="Button9" Grid.Row="3" Grid.Column="2" Content="9" FontSize="50" />
+        <Button Click="Button0_Click" Name="Button0" Grid.Row="4" Grid.Column="1" Content="0" FontSize="50"/>
+        <Button Click="ButtonDecimal_Click" Name="ButtonDecimal" Grid.Row="4" Grid.Column="0" Content="," FontSize="50"/>
+        <Button Click="Button_Click" Name="Equals" Grid.Row="4" Grid.Column="2" Content="=" FontSize="50"/>
+
 
 
     </Grid>
