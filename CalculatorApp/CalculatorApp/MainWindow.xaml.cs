@@ -29,11 +29,6 @@ namespace CalculatorApp
         public MainWindow()
         {
             InitializeComponent();
-            InitializeComponent();
-            int x = 1;
-            do {
-                MyTextBlock.Inlines.Add(tal1 + tecken + tal2 + svar);
-            } while (x == 1);
         }
 
         public void addTecken(String s)
@@ -47,12 +42,16 @@ namespace CalculatorApp
                 tal2 = tal2 + s;
             }
         }
-            
+
 
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
-            addTecken("1");
+            if (e.Source is Button button)
+            {
+                MyTextBlock.Text += button.Content;
+            }
         }
+
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
