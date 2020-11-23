@@ -21,7 +21,6 @@ namespace CalculatorApp
     /// 
     public partial class MainWindow : Window
     {
-        int i = 1;
         String tal1 = "";
         String tal2 = "";
         String tecken = "";
@@ -31,19 +30,6 @@ namespace CalculatorApp
             InitializeComponent();
         }
 
-        public void addTecken(String s)
-        {
-            if (i == 1)
-            {
-                tal1 = tal1 + s;
-            }
-            else
-            {
-                tal2 = tal2 + s;
-            }
-        }
-
-
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
             if (e.Source is Button button)
@@ -52,120 +38,55 @@ namespace CalculatorApp
             }
         }
 
-
-        private void Button2_Click(object sender, RoutedEventArgs e)
-        {
-            addTecken("2");
-        }
-
-        private void Button3_Click(object sender, RoutedEventArgs e)
-        {
-            addTecken("3");
-        }
-
-        private void Button4_Click(object sender, RoutedEventArgs e)
-        {
-            addTecken("4");
-        }
-
-        private void Button5_Click(object sender, RoutedEventArgs e)
-        {
-            addTecken("5");
-        }
-
-        private void Button6_Click(object sender, RoutedEventArgs e)
-        {
-            addTecken("6");
-        }
-
-        private void Button7_Click(object sender, RoutedEventArgs e)
-        {
-            addTecken("7");
-        }
-
-        private void Button8_Click(object sender, RoutedEventArgs e)
-        {
-            addTecken("8");
-        }
-
-        private void Button9_Click(object sender, RoutedEventArgs e)
-        {
-            addTecken("9");
-        }
-
-        private void Button0_Click(object sender, RoutedEventArgs e)
-        {
-            addTecken("0");
-        }
-
         private void Equals_Click(object sender, RoutedEventArgs e)
         {
-            if (float.Parse(tal2) != 0)
+            int resultat = 0;
+            if (MyTextBlock.Text.IndexOf("+")>=0)
             {
-                float resultat = 0;
-                switch (tecken)
+                tal1 = MyTextBlock.Text.Substring(0, MyTextBlock.Text.IndexOf("+"));
+                tal2 = MyTextBlock.Text.Substring(MyTextBlock.Text.IndexOf("+") + 1);
+                resultat = int.Parse(tal1) + int.Parse(tal2);
+                svar = resultat.ToString();
+            }
+            if (MyTextBlock.Text.IndexOf("-")>=0)
+            {
+                tal1 = MyTextBlock.Text.Substring(0, MyTextBlock.Text.IndexOf("-"));
+                tal2 = MyTextBlock.Text.Substring(MyTextBlock.Text.IndexOf("-") + 1);
+                resultat = int.Parse(tal1) - int.Parse(tal2);
+                svar = resultat.ToString();
+            }
+            if (MyTextBlock.Text.IndexOf("x") >= 0)
+            {
+                tal1 = MyTextBlock.Text.Substring(0, MyTextBlock.Text.IndexOf("x"));
+                tal2 = MyTextBlock.Text.Substring(MyTextBlock.Text.IndexOf("x") + 1);
+                resultat = int.Parse(tal1) * int.Parse(tal2);
+                svar = resultat.ToString();
+            }
+            if (MyTextBlock.Text.IndexOf("/") >= 0)
+            {
+                tal1 = MyTextBlock.Text.Substring(0, MyTextBlock.Text.IndexOf("/"));
+                tal2 = MyTextBlock.Text.Substring(MyTextBlock.Text.IndexOf("/") + 1);
+                int kollaNollan = int.Parse(tal2);
+                if (kollaNollan != 0)
                 {
-                    case "+":
-                        resultat = float.Parse(tal1) + float.Parse(tal2);
-                        break;
-                    case "-":
-                        resultat = float.Parse(tal1) - float.Parse(tal2);
-                        break;
-                    case "x":
-                        resultat = float.Parse(tal1) * float.Parse(tal2);
-                        break;
-                    case "/":
-                        resultat = float.Parse(tal1) / float.Parse(tal2);
-                        break;
-                    default:
-
-                        break;
-
+                    resultat = int.Parse(tal1) / int.Parse(tal2);
+                    svar = resultat.ToString();
                 }
-
-                svar = "=" + resultat.ToString();
+                else
+                {
+                    svar = "ERROR";
+                }
             }
-            else
-            {
-                svar = "ERROR";
-            }
-        }
 
-        private void Addition_Click(object sender, RoutedEventArgs e)
-        {
-            tecken = "+";
-            i = 2;
-        }
-
-        private void Subtraktion_Click(object sender, RoutedEventArgs e)
-        {
-            tecken = "-";
-            i = 2;
-        }
-
-        private void Multiplikation_Click(object sender, RoutedEventArgs e)
-        {
-            tecken = "x";
-            i = 2;
-        }
-
-        private void Divition_Click(object sender, RoutedEventArgs e)
-        {
-            tecken = "/";
-            i = 2;
+            MyTextBlock.Text = svar;
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
-            tecken = "";
+            MyTextBlock.Text = "";
             tal1 = "";
             tal2 = "";
             svar = "";
-        }
-
-        private void ButtonDecimal_Click(object sender, RoutedEventArgs e)
-        {
-            addTecken(",");
         }
     }
 }

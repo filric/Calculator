@@ -32,13 +32,14 @@
         <Button Click="Button1_Click" Name="Button8" Grid.Row="3" Grid.Column="1" Content="8" FontSize="50" />
         <Button Click="Button1_Click" Name="Button9" Grid.Row="3" Grid.Column="2" Content="9" FontSize="50" />
         <Button Click="Button1_Click" Name="Button0" Grid.Row="4" Grid.Column="1" Content="0" FontSize="50"/>
-        <Button Click="ButtonDecimal_Click" Name="ButtonDecimal" Grid.Row="4" Grid.Column="0" Content="," FontSize="50"/>
-        <Button Click="Equals_Click" Name="Equals" Grid.Row="4" Grid.Column="2" Content="=" FontSize="50"/>
-        <Button Click="Addition_Click" Name="Addition" Grid.Row="4" Grid.Column="3" Content="+" FontSize="50"/>
-        <Button Click="Subtraktion_Click" Name="Subtraktion" Grid.Row="3" Grid.Column="3" Content="-" FontSize="50"/>
-        <Button Click="Multiplikation_Click" Name="Multiplikation" Grid.Row="2" Grid.Column="3" Content="x" FontSize="50"/>
-        <Button Click="Divition_Click" Name="Divition" Grid.Row="1" Grid.Column="3" Content="/" FontSize="50"/>
+        
+        
+        <Button Click="Button1_Click" Name="Addition" Grid.Row="4" Grid.Column="3" Content="+" FontSize="50"/>
+        <Button Click="Button1_Click" Name="Subtraktion" Grid.Row="3" Grid.Column="3" Content="-" FontSize="50"/>
+        <Button Click="Button1_Click" Name="Multiplikation" Grid.Row="2" Grid.Column="3" Content="x" FontSize="50"/>
+        <Button Click="Button1_Click" Name="Division" Grid.Row="1" Grid.Column="3" Content="/" FontSize="50"/>
         <Button Click="Clear_Click" Name="Clear" Grid.Row="0" Grid.Column="3" Content="AC" FontSize="50"/>
+        <Button Click="Equals_Click" Name="Equals" Grid.Row="4" Grid.Column="2" Content="=" FontSize="50"/>
 
 
 
