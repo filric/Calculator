@@ -23,7 +23,6 @@ namespace CalculatorApp
     {
         String tal1 = "";
         String tal2 = "";
-        String tecken = "";
         String svar = "";
         public MainWindow()
         {
