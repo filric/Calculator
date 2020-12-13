@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CalculatorApp",
+    "\\CalculatorApp\\CalculatorApp"
   ],
+  "SelectedNode": "\\CalculatorApp\\CalculatorApp.sln",
   "PreviewInSolutionExplorer": false
 }
